@@ -114,7 +114,7 @@ namespace CrowdMultiplier.Gameplay
             hasBeenTriggered = true;
             
             // Get current crowd size
-            var crowdController = FindObjectOfType<Core.CrowdController>();
+            var crowdController = FindFirstObjectByType<Core.CrowdController>();
             int currentCrowdSize = crowdController?.GetCrowdSize() ?? 0;
             
             int resultingCrowdSize = ProcessGateEffect(currentCrowdSize, crowdController);
@@ -251,7 +251,7 @@ namespace CrowdMultiplier.Gameplay
         {
             if (Core.GameManager.Instance != null)
             {
-                var analyticsManager = Core.GameManager.Instance.GetComponent<AnalyticsManager>();
+                var analyticsManager = Core.GameManager.Instance.GetComponent<Core.AnalyticsManager>();
                 analyticsManager?.TrackEvent("gate_interaction", new System.Collections.Generic.Dictionary<string, object>
                 {
                     { "gate_type", gateType.ToString() },

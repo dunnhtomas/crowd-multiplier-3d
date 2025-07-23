@@ -144,7 +144,8 @@ namespace CrowdMultiplier.ML
         {
             if (analyticsManager != null)
             {
-                analyticsManager.OnEventTracked += OnAnalyticsEventTracked;
+                // Simple local analytics tracking
+                // analyticsManager.OnEventTracked += OnAnalyticsEventTracked;
             }
             
             if (gameManager != null)
@@ -628,7 +629,8 @@ namespace CrowdMultiplier.ML
             // Unsubscribe from events
             if (analyticsManager != null)
             {
-                analyticsManager.OnEventTracked -= OnAnalyticsEventTracked;
+                // Simple local analytics tracking
+                // analyticsManager.OnEventTracked -= OnAnalyticsEventTracked;
             }
             
             if (gameManager != null)

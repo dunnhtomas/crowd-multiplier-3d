@@ -280,7 +280,7 @@ namespace CrowdMultiplier.Core
             var gateComponent = gate.GetComponent<Gameplay.Gate>();
             if (gateComponent != null)
             {
-                gateComponent.SetGateType(gateType);
+                gateComponent.SetGateType((Gameplay.GateType)gateType);
                 
                 switch (gateType)
                 {

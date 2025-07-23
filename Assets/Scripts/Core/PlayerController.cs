@@ -136,10 +136,10 @@ namespace CrowdMultiplier.Core
             mainCamera = Camera.main;
             if (mainCamera == null)
             {
-                mainCamera = FindObjectOfType<Camera>();
+                mainCamera = FindFirstObjectByType<Camera>();
             }
             
-            crowdController = FindObjectOfType<CrowdController>();
+            crowdController = FindFirstObjectByType<CrowdController>();
             
             // Tag this as Player for other systems
             if (gameObject.tag != "Player")
@@ -151,7 +151,7 @@ namespace CrowdMultiplier.Core
         private void SetupInitialPosition()
         {
             // Position player at the start of the level
-            var levelManager = FindObjectOfType<LevelManager>();
+            var levelManager = FindFirstObjectByType<LevelManager>();
             if (levelManager != null)
             {
                 transform.position = levelManager.GetPlayerStartPosition();
@@ -180,7 +180,7 @@ namespace CrowdMultiplier.Core
             }
             else
             {
-                HandleLegacyInput(ref inputVector);
+                HandleLegacyInput();
             }
             
             // Apply input to target position
@@ -240,18 +240,18 @@ namespace CrowdMultiplier.Core
             {
                 Touch touch = Input.GetTouch(0);
                 
-                if (touch.phase == TouchPhase.Began)
+                if (touch.phase == UnityEngine.TouchPhase.Began)
                 {
                     touchStartPosition = touch.position;
                     isTouching = true;
                 }
-                else if (touch.phase == TouchPhase.Moved && isTouching)
+                else if (touch.phase == UnityEngine.TouchPhase.Moved && isTouching)
                 {
                     Vector2 touchDelta = (touch.position - touchStartPosition) * touchSensitivity * Time.deltaTime;
                     inputVector += touchDelta;
                     touchStartPosition = touch.position;
                 }
-                else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+                else if (touch.phase == UnityEngine.TouchPhase.Ended || touch.phase == UnityEngine.TouchPhase.Canceled)
                 {
                     isTouching = false;
                 }
