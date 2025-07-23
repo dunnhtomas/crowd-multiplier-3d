@@ -1,0 +1,48 @@
+{
+  "dependencies": {
+    "com.unity.2d.sprite": "1.0.0",
+    "com.unity.2d.tilemap": "1.0.0",
+    "com.unity.2d.tilemap.extras": "4.0.1",
+    "com.unity.analytics": "4.4.0",
+    "com.unity.burst": "1.8.15",
+    "com.unity.cinemachine": "2.10.0",
+    "com.unity.collections": "2.2.1",
+    "com.unity.entities": "1.0.16",
+    "com.unity.feature.2d": "2.0.0",
+    "com.unity.ide.rider": "3.0.24",
+    "com.unity.ide.visualstudio": "2.0.18",
+    "com.unity.ide.vscode": "1.2.5",
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.jobs": "0.70.0-preview.7",
+    "com.unity.mathematics": "1.3.1",
+    "com.unity.mobile.android-provider": "1.0.1",
+    "com.unity.mobile.notifications": "2.3.0",
+    "com.unity.netcode.gameobjects": "1.7.1",
+    "com.unity.purchasing": "4.9.4",
+    "com.unity.render-pipelines.universal": "14.0.11",
+    "com.unity.services.analytics": "5.0.0",
+    "com.unity.services.authentication": "3.3.0",
+    "com.unity.services.cloud-build": "1.0.5",
+    "com.unity.services.core": "1.12.0",
+    "com.unity.services.economy": "3.3.0",
+    "com.unity.services.mediation": "1.0.5",
+    "com.unity.services.push-notifications": "1.0.6",
+    "com.unity.services.relay": "1.0.5",
+    "com.unity.services.remote-config": "3.3.2",
+    "com.unity.test-framework": "1.1.33",
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.timeline": "1.7.5",
+    "com.unity.ugui": "1.0.0",
+    "com.unity.visualscripting": "1.9.4",
+    "com.unity.xr.legacyinputhelpers": "2.1.10"
+  },
+  "scopedRegistries": [
+    {
+      "name": "Unity Gaming Services",
+      "url": "https://registry.packages.unity.com/packages",
+      "scopes": [
+        "com.unity.services"
+      ]
+    }
+  ]
+}
